@@ -17,9 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/test','UserController@test');
 Route::get('user/findpwd','UserController@findpwd');
 Route::post('user/findpwd1','UserController@findpwd1');
 Route::get('user/send','UserController@send');
 Route::get('user/verfind','UserController@verfind');
 Route::post('user/verfinds','UserController@verfinds');
+=======
+//注册
+Route::get('/register','UserController@register'); //注册视图
+Route::post('/regDo','UserController@regDo'); //注册编辑
+>>>>>>> reg
