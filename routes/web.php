@@ -23,3 +23,9 @@ Route::post('user/findpwd1','UserController@findpwd1');
 Route::get('user/send','UserController@send');
 Route::get('user/verfind','UserController@verfind');
 Route::post('user/verfinds','UserController@verfinds');
+
+
+
+
+Route::get('/login/login','UserController@login');                      //登录视图
+Route::post('/login/login_do','UserController@loginDo');                 //登录视图
