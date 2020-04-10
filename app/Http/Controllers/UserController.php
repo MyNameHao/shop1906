@@ -23,9 +23,9 @@ class UserController extends Controller
     public function loginDo(Request $request)
     {
         //接收账号
-        $account = $request->input('account');
+        $account = $request->input('u_name');
         //接收密码
-        $pass = $request->input('pass');
+        $u_password = $request->input('u_password');
 
         //根据用户名在数据库中进行查询
         $user_info = UserModel::where(['u_tel' => $account])->orWhere(['u_email'  => $account])->orWhere(['u_name' => $account])->first();
@@ -42,7 +42,7 @@ class UserController extends Controller
         $pass = $request->input('pass');
 
         //使用门面Hash中check()方法，进行验证，对比当前密码和数据库加密之后的密码是否相同。
-        if(!Hash::check($pass,$user_info['pass'])){
+        if(!Hash::check($u_password,$user_info['u_password1'])){
             echo "密码有误";
             die;
         }
