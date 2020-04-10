@@ -32,31 +32,31 @@
         <div class=" w3l-form-group">
             <div class="group">
                 <i class="fas fa-user"></i>
-                <input type="text" class="form-control" name="user_name" placeholder="Username" required="required" />
+                <input type="text" class="form-control" name="u_name" placeholder="Username" required="required" />
             </div>
         </div>
         <div class=" w3l-form-group">
             <div class="group">
                 <i class="fas fa-unlock"></i>
-                <input type="password" class="form-control" name="pass" placeholder="Password" required="required" />
+                <input type="password" class="form-control" name="u_password" placeholder="Password" required="required" />
             </div>
         </div>
         <div class=" w3l-form-group">
             <div class="group">
                 <i class="fas fa-unlock"></i>
-                <input type="password" class="form-control" name="pass1"placeholder="Confirm Password" required="required" />
+                <input type="password" class="form-control" name="u_password1"placeholder="Confirm Password" required="required" />
             </div>
         </div>
         <div class=" w3l-form-group">
             <div class="group">
                 <i class="fa fa-phone"></i>
-                <input type="text" class="form-control" name="tel" placeholder="Mobile" required="required" />
+                <input type="text" class="form-control" name="u_tel" placeholder="Mobile" required="required" />
             </div>
         </div>
         <div class=" w3l-form-group">
             <div class="group">
                 <i class="fa fa-envelope"></i>
-                <input type="text" class="form-control" name="email" placeholder="Email" required="required" />
+                <input type="text" class="form-control" name="u_email" placeholder="Email" required="required" />
             </div>
         </div>
         <div class="forgot">

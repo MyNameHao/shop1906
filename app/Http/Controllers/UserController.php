@@ -49,11 +49,11 @@ class UserController extends Controller
 
     }
 //注册
-public function register(){
-    return view('user/create');
+        public function register(){
+            return view('user/create');
 }
 //注册的编辑
-public function regDo(){
+    public function regDo(){
     $post=request()->except('_token');
     $u_name=request()->input('u_name');
 
@@ -90,12 +90,14 @@ public function regDo(){
     $pass=password_hash($post['pass'],PASSWORD_BCRYPT);
 
     //入库
+    
     $data=[
         'u_name'      =>$u_name,
         'u_tel'       =>$post['u_tel'],
         'u_email'     =>$post['u_email'],
         'pass'      =>$pass,
     ];
+    // dd($data);
     $uid=UserModel::insertGetId($data);
     echo "<script>alert('注册成功');location.href='/login/login';</script>";
 
