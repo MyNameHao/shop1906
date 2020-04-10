@@ -147,6 +147,7 @@ class UserController extends Controller
         }
     }
     public function send($link,$email) {
+        // dd($email);
 //       $aaa=$email;
         Mail::send('emails.findpwd',['email'=>$link],function($message)use($email){
             $to = $email;
