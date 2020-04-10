@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/login/login','UserController@login');                      //登录视图
 Route::post('/login/login_do','UserController@loginDo');                 //登录视图
-Route::post('/user/center','UserController@center');                 //个人中心
+Route::post('/login/center','UserController@center');                 //个人中心
 //找回密码
 Route::get('/test','UserController@test');
 Route::get('user/findpwd','UserController@findpwd');
