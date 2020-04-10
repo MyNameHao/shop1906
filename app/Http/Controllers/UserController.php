@@ -47,6 +47,9 @@ class UserController extends Controller
             
         // }
 
+
+        //1//////
+
         header('Refresh:5;url=/user/center');
         echo "登录成功，正在跳转至个人中心....";
 
