@@ -51,6 +51,9 @@ class UserController extends Controller
         echo "登录成功，正在跳转至个人中心....";
 
     }
+        public function center(){
+            echo '个人中心';
+        }
 //注册
 
         public function register(){
