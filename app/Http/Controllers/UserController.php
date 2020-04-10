@@ -39,10 +39,10 @@ class UserController extends Controller
         }
 
         //接收密码
-        $u_password = $request->input('u_password');
+        $u_password1 = $request->input('u_password1');
 
         //使用门面Hash中check()方法，进行验证，对比当前密码和数据库加密之后的密码是否相同。
-        if(!Hash::check($u_password,$user_info['u_password'])){
+        if(!Hash::check($u_password1,$user_info['u_password'])){
             echo "密码有误";
             die;
         }
