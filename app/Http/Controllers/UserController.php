@@ -23,12 +23,12 @@ class UserController extends Controller
     public function loginDo(Request $request)
     {
         //接收账号
-        $account = $request->input('u_name');
+        $account = $request->input('account');
         //接收密码
         $pass = $request->input('pass');
 
         //根据用户名在数据库中进行查询
-        $user_info = UserModel::where(['u_tel' => $u_name])->orWhere(['u_email'  => $u_name])->orWhere(['u_name' => $u_name])->first();
+        $user_info = UserModel::where(['u_tel' => $account])->orWhere(['u_email'  => $account])->orWhere(['u_name' => $account])->first();
         //dd($user_info);u_
 
         //判断数据库中是否能查到
