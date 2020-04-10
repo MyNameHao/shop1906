@@ -42,9 +42,9 @@ class UserController extends Controller
         $u_password1 = $request->input('u_password1');
 
         //使用门面Hash中check()方法，进行验证，对比当前密码和数据库加密之后的密码是否相同。
-        if(!Hash::check($u_password1,$user_info['u_password'])){
+        if(!Hash::check($u_password1,$user_info['u_password1'])){
             echo "密码有误";
-            die;
+            
         }
 
         header('Refresh:2;url=/user/center');
