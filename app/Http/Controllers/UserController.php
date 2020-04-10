@@ -83,15 +83,15 @@ class UserController extends Controller
         }
 
         //判断密码
-        $pass=request()->input('u_password');
-        $pass1=request()->input('u_password1');
-        if($pass!=$pass1){
+        $u_password=request()->input('u_password');
+        $u_password1=request()->input('u_password1');
+        if($u_password!=$u_password1){
             echo "密码不正确 请重新输入";
             die;
         }
 
         //密码加密
-        $pass=password_hash($post['pass'],PASSWORD_BCRYPT);
+        $pass=password_hash($post['u_password'],PASSWORD_BCRYPT);
 
 
 
@@ -100,7 +100,7 @@ class UserController extends Controller
             'u_name'      =>$u_name,
             'u_tel'       =>$post['u_tel'],
             'u_email'     =>$post['u_email'],
-            'pass'      =>$pass,
+            'u_password'      =>$u_password,
         ];
         $uid=UserModel::insertGetId($data);
         echo "<script>alert('注册成功');location.href='/login/login';</script>";
