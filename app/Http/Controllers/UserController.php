@@ -38,14 +38,14 @@ class UserController extends Controller
             die;
         }
 
-        //接收密码
-        $u_password1 = $request->input('u_password1');
+        // //接收密码
+        // $u_password1 = $request->input('u_password1');
 
-        //使用门面Hash中check()方法，进行验证，对比当前密码和数据库加密之后的密码是否相同。
-        if(!Hash::check($u_password1,$user_info['u_password1'])){
-            echo "密码有误";
+        // //使用门面Hash中check()方法，进行验证，对比当前密码和数据库加密之后的密码是否相同。
+        // if(!Hash::check($u_password1,$user_info['u_password1'])){
+        //     echo "密码有误";
             
-        }
+        // }
 
         header('Refresh:2;url=/user/center');
         echo "登录成功，正在跳转至个人中心....";
